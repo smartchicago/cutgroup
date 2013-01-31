@@ -1,5 +1,5 @@
 h1,h2   { font-family: "Roboto Condensed", Helvetica, Arial; font-weight: 400;}
-body    { font-family: "Roboto Condensed", Helvetica, Arial; font-weight: 300; padding-top: 60px; padding-bottom: 40px;}
+body    { font-family: "Roboto Condensed", Helvetica, Arial; font-weight: 300; padding-top: 60px; padding-bottom: 40px; font-size: 14pt; line-height: 18pt;}
 
 div.section-break { padding-top: 40px; }
 
