@@ -55,17 +55,23 @@ var ward_signups = {
 var ward_map;
 
 $(document).ready(function(){
-  ward_map = $K.map('#ward-map');
-  ward_map.loadMap('assets/img/wards.svg', function(){
-    ward_map.addLayer('chicago', {
-      styles : {
-        'stroke-width': '0.75px',
-        fill: "#fff"
-      }
-    });
-    
-    doMap();
-  });    
+  if ($('html.lt-ie9').length != 0){ 
+    // for IE8 and below, don't bother with the map
+    $("#ward-map-container").remove();
+    $("#main-body-copy").removeClass("span6").addClass("span12");
+  } else {
+    ward_map = $K.map('#ward-map');
+    ward_map.loadMap('assets/img/wards.svg', function(){
+      ward_map.addLayer('chicago', {
+        styles : {
+          'stroke-width': '0.75px',
+          fill: "#fff"
+        }
+      });
+
+      doMap();
+    });    
+  }
 });
 
 function color_for_value(val){
