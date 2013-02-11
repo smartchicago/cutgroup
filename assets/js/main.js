@@ -51,7 +51,6 @@ var ward_signups = {
   '50': 4,
 }
 
-var color_range = ["#CCFFFF", "#99CCCC", "#669999", "#336666", "#003333"];
 
 var ward_map;
 
@@ -68,6 +67,17 @@ $(document).ready(function(){
     doMap();
   });    
 });
+
+function color_for_value(val){
+  var color_range = ["#CCFFFF", "#99CCCC", "#669999", "#336666", "#003333"];    // colors for map, in increasing darkness
+
+  var counts = _.sortBy(_.uniq(_.values(ward_signups)), function(a){ return a; } );
+  if(counts[0] == 0 ){ counts.shift() } // pop zeros, will plot as blank regions
+  
+  index_of_val = _.indexOf(counts, val);  
+  color_index = Math.floor((index_of_val / counts.length) * color_range.length);
+  return color_range[color_index];
+}
 
 function doMap(){
   layer = ward_map.getLayer('chicago');
@@ -90,7 +100,7 @@ function doMap(){
       if(ward_signups[d.ward] == 0){
           return "#fff";
         } else {
-          return color_range[Math.floor(Math.random() * color_range.length)];
+          return color_for_value(ward_signups[d.ward]);
         }
       }
   });
