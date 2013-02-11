@@ -12,7 +12,7 @@ div.hero-unit { padding: 20px; }
 
 div.tooltip { font-size: 14pt; } 
 
-
+path:hover { cursor: pointer; }  /* h/t @srobbin */
 
 
 
