@@ -14,12 +14,12 @@ var ward_signups = {
   '13': 8,
   '14': 10,
   '15': 7,
-  '16': 3,
+  '16': 0,
   '17': 1,
   '18': 8,
   '19': 4,
   '20': 8,
-  '21': 5,
+  '21': 0,
   '22': 9,
   '23': 6,
   '24': 9,
@@ -27,7 +27,7 @@ var ward_signups = {
   '26': 8,
   '27': 4,
   '28': 2,
-  '29': 10,
+  '29': 0,
   '30': 1,
   '31': 10,
   '32': 6,
@@ -36,18 +36,18 @@ var ward_signups = {
   '35': 2,
   '36': 8,
   '37': 6,
-  '38': 7,
+  '38': 0,
   '39': 7,
   '40': 6,
-  '41': 1,
+  '41': 0,
   '42': 10,
   '43': 4,
   '44': 5,
   '45': 9,
-  '46': 3,
+  '46': 0,
   '47': 10,
   '48': 5,
-  '49': 3,
+  '49': 0,
   '50': 4,
 }
 
@@ -73,20 +73,26 @@ function doMap(){
   layer = ward_map.getLayer('chicago');
 
   for(ward in ward_signups){
-    console.log("looking for " + ward)
+    // console.log("looking for " + ward)
     var path = layer.getPaths({ward: ward});
-    console.log("got path: %o", path);
+    // console.log("got path: %o", path);
 
     var node = path[0].svgPath.node;
     jQuery.data(node,"signups", ward_signups[path[0].data.ward]);
     jQuery.data(node,"ward", path[0].data.ward);    
-    console.log("%o --> ward %o, signups %o", node, path[0].data.ward, ward_signups[path[0].data.ward]);
-    console.log("data: %o", jQuery.data(node));
+    // console.log("%o --> ward %o, signups %o", node, path[0].data.ward, ward_signups[path[0].data.ward]);
+    // console.log("data: %o", jQuery.data(node));
   }
 
   // colors!
   ward_map.getLayer('chicago').style({
-    fill: function(d){ return color_range[Math.floor(Math.random() * color_range.length)] }
+    fill: function(d){ 
+      if(ward_signups[d.ward] == 0){
+          return "#fff";
+        } else {
+          return color_range[Math.floor(Math.random() * color_range.length)];
+        }
+      }
   });
 
   var hover_color = "#ccc"  
