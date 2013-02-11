@@ -83,15 +83,10 @@ function doMap(){
   layer = ward_map.getLayer('chicago');
 
   for(ward in ward_signups){
-    // console.log("looking for " + ward)
     var path = layer.getPaths({ward: ward});
-    // console.log("got path: %o", path);
-
     var node = path[0].svgPath.node;
     jQuery.data(node,"signups", ward_signups[path[0].data.ward]);
     jQuery.data(node,"ward", path[0].data.ward);    
-    // console.log("%o --> ward %o, signups %o", node, path[0].data.ward, ward_signups[path[0].data.ward]);
-    // console.log("data: %o", jQuery.data(node));
   }
 
   // colors!
