@@ -104,6 +104,8 @@ function doMap(){
   $("path.chicago").each(function(idx, obj){    
     $(obj).bind("mouseenter", function(){ $(obj).data('previous-fill-color', $(obj).attr('fill')); $(obj).attr("fill", hover_color); });
     $(obj).bind("mouseleave", function(){ $(obj).attr("fill", $(obj).data('previous-fill-color')); });
-    $(obj).tooltip({container: 'body', animation: false, placement: 'left', title: "Ward " + $.data(obj,'ward') + ": " +  ($.data(obj,'signups') || '0') + " testers" });
+    
+    var number_of_signups = $.data(obj,'signups');
+    $(obj).tooltip({container: 'body', animation: false, placement: 'left', title: "Ward " + $.data(obj,'ward') + ": " +  (number_of_signups || '0') + " tester" + (number_of_signups == 1 ? '' : 's') });
   });  
 }
