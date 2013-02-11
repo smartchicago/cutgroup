@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
         <link rel="stylesheet" href="assets/css/main.css">
         <script src="assets/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+        
         <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300' rel='stylesheet' type='text/css'>
     </head>
     <body>
@@ -58,7 +59,7 @@
 
             <a name="signup"></a>
             <div class="row section-break">
-                <div class="span6">
+                <div class="span6" id="main-body-copy">
                     
                     <h2>Be a tester, get paid</h2>
                     <p>The Civic User Testing Group (CUT Group) is a set of regular Chicago residents who get paid to test out civic apps.</p>
@@ -77,8 +78,8 @@
 
                     <p>We need people from all over the city, using all sorts of devices, browsers and operating systems.</p>                    
                 </div>
-                <div class="span6">
-                  <img src="assets/img/ward-map-outlines.png" alt="Ward Map"/>
+                <div class="span6" id="ward-map-container">
+                  <div id="ward-map"></div>
                 </div>
               </div>
               
@@ -154,12 +155,14 @@
             </footer>
         </div> <!-- /container -->
 
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
 
         <script src="assets/js/vendor/bootstrap.min.js"></script>
-
-        <script src="assets/js/main.js"></script>
+        <script src="assets/js/vendor/raphael-min.js"></script>
+        <script src="assets/js/vendor/kartograph.min.js"></script>
+        <script src="assets/js/vendor/underscore-min.js"></script>
+        <script src="assets/js/main-min.js"></script>
 
         <script>
             var _gaq=[['_setAccount','UA-37739534-4'],['_trackPageview']];
