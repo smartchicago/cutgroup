@@ -26,11 +26,11 @@ Before deployment, setup your environment to interact with AWS S3.
 
   1. Install the [s3cmd](http://s3tools.org/s3cmd) tool. If you use homebrew, run:
 
-    brew install s3cmd
+        brew install s3cmd
 
   2. Configure the .s3cfg file:
 
-    s3cmd --configure -c .s3cfg
+        s3cmd --configure -c .s3cfg
 
   3. When prompted, enter your AWS access key and secret key. Use the defaults (enter) for all other prompts.
 
