@@ -9,6 +9,8 @@ S3CMD = s3cmd -c .s3cfg \
 	--rexclude '\.git|s3cfg|Makefile|signups.json|.DS_Store' \
 	sync ./
 
+all: staging
+
 deploy: minify
 	$(S3CMD) $(PRODUCTION_BUCKET)
 
