@@ -11,10 +11,10 @@ S3CMD = s3cmd -c .s3cfg \
 
 all: staging
 
-deploy: minify
+deploy:
 	$(S3CMD) $(PRODUCTION_BUCKET)
 
-staging: minify
+staging:
 	$(S3CMD) $(STAGING_BUCKET)
 
 minify:
