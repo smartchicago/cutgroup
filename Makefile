@@ -19,3 +19,6 @@ staging:
 
 minify:
 	uglifyjs assets/js/main.js -c -o assets/js/main-min.js
+
+server:
+	jekyll --server --auto
