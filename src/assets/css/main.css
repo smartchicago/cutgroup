@@ -20,11 +20,24 @@ div.post {
   margin-bottom: 40px;
 }
 
-p.post-tagline {
+body.page p.post-tagline {
   font-size: 10pt;
   color: #aaa;
 /*  margin-top:-10px;*/
   line-height: 0.75%;
+}
+
+
+body.post p.post-tagline {
+  font-size: 12pt;
+  color: #aaa;
+  margin-top: 40px;  
+}
+
+
+body.post div.navigation-controls {
+  margin-top: 40px;
+  font-size: 12pt;
 }
 
 
