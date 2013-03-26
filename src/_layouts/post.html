@@ -13,6 +13,7 @@
         <meta property="og:site_name"       content="Civic User Testing Group"/>
         <meta property="og:description"     content="{{ page.synopsis }}"/>
         <meta property="fb:app_id"          content="485494061518441">
+        <link rel="alternate" type="application/atom+xml"  title="Feed of CUT Group program updates" href="/updates/feed.xml" />        
     </head>
     <body class="post">
         <div id="fb-root"></div>
@@ -57,7 +58,7 @@
         <div class="row navigation-controls">
             <hr />
             <div class="span5 pull-left">
-                <a href="{{ page.previous.url }}">&larr; Previous: "{{ page.previous.title }}"
+                {% if page.previous %}<a href="{{ page.previous.url }}">&larr; Previous: "{{ page.previous.title }}"{% endif %}
             </div>
 
             <div class="span2" style="text-align:center;">
@@ -66,7 +67,7 @@
 
 
             <div class="span5 pull-right" style="text-align:right;">
-                <a href="{{ page.next.url }}">Next: "{{ page.next.title }}" &rarr;</a>
+                {% if page.next %}<a href="{{ page.next.url }}">Next: "{{ page.next.title }}" &rarr;</a>{% endif %}
             </div>                
         </div>
         
