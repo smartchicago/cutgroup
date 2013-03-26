@@ -7,7 +7,7 @@ S3CMD = s3cmd -c .s3cfg \
 	--reduced-redundancy \
 	--progress \
 	--rexclude '\.git|s3cfg|Makefile|signups.json|.DS_Store' \
-	sync ./
+	sync ./site/
 
 all: staging
 
@@ -19,3 +19,6 @@ staging:
 
 minify:
 	uglifyjs assets/js/main.js -c -o assets/js/main-min.js
+
+server:
+	jekyll --server --auto

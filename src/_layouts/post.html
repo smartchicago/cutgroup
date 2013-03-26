@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" xmlns:fb="http://ogp.me/ns/fb#"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" xmlns:fb="http://ogp.me/ns/fb#"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" xmlns:fb="http://ogp.me/ns/fb#"> <!--<![endif]-->
+    <head>
+        {% include header.html %}
+        <title>{{ page.title }} | Civic User Testing Group - Smart Chicago Collaborative</title>
+        <meta property="og:title"           content="{{ page.title}}"/>
+        <meta property="og:type"            content="article"/>
+        <meta property="og:url"             content="{{ site.url }}{{ page.url }}"/>
+        <meta property="og:image"           content="{{ site.url }}/assets/img/scc-go-logo.png"/>
+        <meta property="og:site_name"       content="Civic User Testing Group"/>
+        <meta property="og:description"     content="{{ page.synopsis }}"/>
+        <meta property="fb:app_id"          content="485494061518441">
+        <link rel="alternate" type="application/atom+xml"  title="Feed of CUT Group program updates" href="/updates/feed.xml" />        
+    </head>
+    <body class="post">
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+        
+        {% include navigation_bar.html %}
+        
+        <div class="row">
+            <div class="span12">
+                <h1>{{ page.title }}</h1>
+                <hr />                
+            </div>
+        </div>
+            
+        <div class="row">
+            <div class="span12 post-content">
+                {{ content }}
+            </div>
+
+            <div class="span8 pull-left">
+                <p class="post-tagline">Posted by {{ page.author_name }} on {{ page.date | date: "%B %d, %Y" }}.</p>
+            </div>
+            
+            <div class="span2 dingus-holder">
+                <!-- twitter dingus -->
+                <a href="https://twitter.com/share" class="twitter-share-button" data-via="cutgroup" data-hashtags="cutgroup" data-dnt="true">Tweet</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>                    
+                
+            </div>
+            <div class="span2 dingus-holder" style="text-align:left">
+                <!-- fbook dingus -->                
+                <div class="fb-like" data-send="true" data-layout="button_count" data-width="90" data-show-faces="false"></div>
+            </div>            
+        </div>
+        
+        <div class="row navigation-controls">
+            <hr />
+            <div class="span5 pull-left">
+                {% if page.previous %}<a href="{{ page.previous.url }}">&larr; Previous: "{{ page.previous.title }}"{% endif %}
+            </div>
+
+            <div class="span2" style="text-align:center;">
+                <a href="/updates/index.html" title="All posts">All posts</a>
+            </div>
+
+
+            <div class="span5 pull-right" style="text-align:right;">
+                {% if page.next %}<a href="{{ page.next.url }}">Next: "{{ page.next.title }}" &rarr;</a>{% endif %}
+            </div>                
+        </div>
+        
+        {% include footer.html %}
+    </body>
+</html>

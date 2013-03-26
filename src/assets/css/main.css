@@ -1,0 +1,60 @@
+h1,h2   { font-family: "Roboto Condensed", Helvetica, Arial; font-weight: 400;}
+body    { font-family: "Roboto Condensed", Helvetica, Arial; font-weight: 300; font-size: 14pt; line-height: 18pt;}
+
+div.section-break { padding-top: 40px; }
+
+div.hero-unit { padding: 20px; } 
+
+/* responsive tweaks */
+@media (min-width: 979px) {
+  body { padding-top: 60px; padding-bottom: 40px; 
+}
+
+div.tooltip { font-size: 14pt; } 
+
+path:hover { cursor: pointer; }  /* h/t @srobbin */
+
+/* blog */
+
+div.post {
+  margin-bottom: 40px;
+}
+
+body.page p.post-tagline {
+  font-size: 10pt;
+  color: #aaa;
+/*  margin-top:-10px;*/
+  line-height: 0.75%;
+}
+
+
+body.post p.post-tagline {
+  font-size: 12pt;
+  color: #aaa;
+  margin-top: 40px;  
+}
+
+body.post div.dingus-holder {
+  margin-top: 40px;
+  text-align:right;
+}
+
+body.post div.fb-like {
+  display: inline-block !important;
+}
+
+body.post iframe.twitter-share-button {
+  margin-top: 4px;
+  border:none;
+  display: inline-block !important;
+}
+
+body.post div.navigation-controls {
+  margin-top: 40px;
+  font-size: 12pt;
+}
+
+
+
+
+
