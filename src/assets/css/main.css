@@ -14,7 +14,18 @@ div.tooltip { font-size: 14pt; }
 
 path:hover { cursor: pointer; }  /* h/t @srobbin */
 
+/* blog */
 
+div.post {
+  margin-bottom: 40px;
+}
+
+p.post-tagline {
+  font-size: 10pt;
+  color: #aaa;
+/*  margin-top:-10px;*/
+  line-height: 0.75%;
+}
 
 
 

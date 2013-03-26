@@ -4,6 +4,7 @@ published: true
 layout: post
 author_name: "Chris Gansen"
 author_email: "cgansen@gmail.com"
+synopsis: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do"
 ---
 
 hello, world!
