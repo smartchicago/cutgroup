@@ -34,6 +34,20 @@ body.post p.post-tagline {
   margin-top: 40px;  
 }
 
+body.post div.dingus-holder {
+  margin-top: 40px;
+  text-align:right;
+}
+
+body.post div.fb-like {
+  display: inline-block !important;
+}
+
+body.post iframe.twitter-share-button {
+  margin-top: 4px;
+  border:none;
+  display: inline-block !important;
+}
 
 body.post div.navigation-controls {
   margin-top: 40px;
