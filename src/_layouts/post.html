@@ -5,7 +5,14 @@
 <!--[if gt IE 8]><!--> <html class="no-js" xmlns:fb="http://ogp.me/ns/fb#"> <!--<![endif]-->
     <head>
         {% include header.html %}
-        <title>{{ page.title }} | Civic User Testing Group - Smart Chicago Collaborative</title>        
+        <title>{{ page.title }} | Civic User Testing Group - Smart Chicago Collaborative</title>
+        <meta property="og:title"           content="{{ page.title}}"/>
+        <meta property="og:type"            content="article"/>
+        <meta property="og:url"             content="{{ site.url }}{{ page.url }}"/>
+        <meta property="og:image"           content="{{ site.url }}/assets/img/scc-go-logo.png"/>
+        <meta property="og:site_name"       content="Civic User Testing Group"/>
+        <meta property="og:description"     content="{{ page.synopsis }}"/>
+        <meta property="fb:app_id"          content="485494061518441">
     </head>
     <body class="post">
         <div id="fb-root"></div>
