@@ -7,18 +7,19 @@ $(document).ready(function(){
     $("#ward-map-container").remove();
     $("#main-body-copy").removeClass("span6").addClass("span12");
   } else {
-    $.get('assets/js/signups.json', function(data) { ward_signups = data; });
-    
-    ward_map = $K.map('#ward-map');
-    ward_map.loadMap('assets/img/wards.svg', function(){
-      ward_map.addLayer('chicago', {
-        styles : {
-          'stroke-width': '0.75px',
-          fill: "#fff"
-        }
-      });
-      doMap();            
-    });    
+    $.get('assets/js/signups.json', function(data) { 
+      ward_signups = data;
+      ward_map = $K.map('#ward-map');
+      ward_map.loadMap('assets/img/wards.svg', function(){
+        ward_map.addLayer('chicago', {
+          styles : {
+            'stroke-width': '0.75px',
+            fill: "#fff"
+          }
+        });
+        doMap();            
+      }); 
+    });   
   }
 });
 
