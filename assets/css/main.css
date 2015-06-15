@@ -2,7 +2,7 @@
 body    { font-family: "Roboto Condensed", Helvetica, Arial; font-weight: 300; font-size: 14pt; line-height: 18pt;}*/
 
 h1, h2, h3, h4, h5, h6 { color: #005a96; font-family: "Raleway", Arial, Helvetica, sans-serif; font-weight: 400;	}
-body { color: #333a42; font-family: "Noto Serif", Georgia, Times, serif; font-size: 14pt; line-height: 1.8;}
+body { color: #333a42; font-family: "Noto Serif", Georgia, Times, serif; font-weight: 300; font-size: 14pt; line-height: 18pt;}
 
 
 div.section-break { padding-top: 40px; }
