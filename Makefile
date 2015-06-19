@@ -6,7 +6,7 @@ S3CMD = s3cmd -c .s3cfg \
 	--no-delete-removed \
 	--reduced-redundancy \
 	--progress \
-	--rexclude '\.git|s3cfg|Makefile|signups.json|.DS_Store' \
+	--rexclude '\.git|s3cfg|Makefile|.DS_Store' \
 	sync ./
 
 all: staging
