@@ -42,7 +42,8 @@ function doMap(){
     var node = path[0].svgPath.node;
     jQuery.data(node,"signups", ward_signups[path[0].data.ward]);
     jQuery.data(node,"ward", path[0].data.ward);
-    jQuery.data(node,"displaynam", path[0].data.displaynam);    
+        jQuery.data(node,"displaynam", path[0].data.displaynam);    
+    
   }
 
   // colors!
@@ -62,6 +63,6 @@ function doMap(){
     $(obj).bind("mouseleave", function(){ $(obj).attr("fill", $(obj).data('previous-fill-color')); });
     
     var number_of_signups = $.data(obj,'signups');
-    $(obj).tooltip({container: 'body', animation: false, placement: 'left', title: $.data(obj,'displaynam') + ": " +  (number_of_signups || '0') + " tester" + (number_of_signups == 1 ? '' : 's') });
+    $(obj).tooltip({container: 'body', animation: false, placement: 'left', title: "Ward " + $.data(obj,'ward') + ": " +  (number_of_signups || '0') + " tester" + (number_of_signups == 1 ? '' : 's') });
   });  
 }
