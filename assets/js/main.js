@@ -10,7 +10,7 @@ $(document).ready(function(){
     $.get('assets/js/signups.json', function(data) { 
       ward_signups = data;
       ward_map = $K.map('#ward-map');
-      ward_map.loadMap('assets/img/combined-n.svg', function(){
+      ward_map.loadMap('assets/img/merged_001.svg', function(){
         ward_map.addLayer('chicago', {
           styles : {
             'stroke-width': '0.75px',
