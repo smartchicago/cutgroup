@@ -9,6 +9,7 @@ $(document).ready(function(){
   } else {
     $.get('assets/js/signups.json', function(data) { 
       ward_signups = data;
+      console.log("ward_signups data = " + ward_signups);
       ward_map = $K.map('#ward-map');
       ward_map.loadMap('assets/img/merged_001.svg', function(){
         ward_map.addLayer('chicago', {
@@ -38,8 +39,11 @@ function doMap(){
   layer = ward_map.getLayer('chicago');
 
   for(ward in ward_signups){
+    console.log("[doMap] ward = " + ward);
     var path = layer.getPaths({ward: ward});
+    console.log("[doMap] path = " + path);
     var node = path[0].svgPath.node;
+    console.log("[doMap] node = " + node);
     jQuery.data(node,"signups", ward_signups[path[0].data.ward]);
     jQuery.data(node,"ward", path[0].data.ward);
     jQuery.data(node,"displaynam", path[0].data.displaynam);    
